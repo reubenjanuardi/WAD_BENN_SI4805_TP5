@@ -16,6 +16,12 @@ class Book extends Model
     protected $table = 'books';
 
     protected $fillable = [
+        'title',
+        'author',
+        'published_year',
+        'is_available',
+        'created_at',
+        'update_at',
 
     ];
 }
