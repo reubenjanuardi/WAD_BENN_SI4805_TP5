@@ -9,8 +9,8 @@ use App\Http\Controllers\CategoriesController;
  * ==========1===========
  * unprotected routes for user registration and login
  */
-Route::post('register', [AuthController::class, 'register']);
-Route::post('login', [AuthController::class, 'login']);
+Route::post('/register', [AuthController::class, 'register']);
+Route::post('/login', [AuthController::class, 'login']);
 
 /**
  * =========2===========
@@ -21,7 +21,7 @@ Route::middleware('auth:sanctum')->group(function () {
      * =========3===========
      * User logout route
      */
-    Route::post('logout', [AuthController::class, 'logout']);
+    Route::post('/logout', [AuthController::class, 'logout']);
 
     /**
      * =========4===========
@@ -33,7 +33,5 @@ Route::middleware('auth:sanctum')->group(function () {
      * =========5===========
      * Return or borrow books
      */
-    Route::put('books/{id}/borrow-return', [BooksController::class, 'borrowReturn']);
+    Route::put('/books/{id}/borrow', [BooksController::class, 'borrowReturn']);
 });
-
-
